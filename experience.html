@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MY EXPERIENCE</title>
+
+<style>
+
+{
+	margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Georgia", serif;
+	}
+	body {
+		min-height: 100vh;
+		background: linear-gradient(135deg, #000000, #B76E79);
+		color: white;
+		padding: 60px;
+	}
+
+.navbar {
+	        position: absolute;
+	        top: 40px;
+	        right: 60px;
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	        font-size: 14px;
+	        letter-spacing: 2px;
+        }
+
+        .navbar a {
+        	color: white;
+        	text-decoration: none;
+        	margin-left: 25px;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 40px;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+}
+
+.grid {
+	display: inline-grid;
+	grid-template-colums: repeat (auto-fit, mimax(260px, 1fr));
+	gap: 40px;
+	margin-bottom: 90px;
+}
+
+.card {
+	background: rgba(255, 255, 255, 0.06);
+	border-radius: 24px;
+	padding: 25px;
+	text-align: center;
+	backdrop-filter: blur(6px);
+}
+
+.image-box img {
+	width: 50%;
+	height: 50%;
+	object-fit: cover;
+	animation: floatToggle 6s ease-in-out-infinite;
+}
+
+.card h3 {
+	font-size: 24;
+	margin-bottom: 10px;
+}
+
+.card p {
+	font-size: 17px;
+	opacity: 0.85;
+	line-height: 1.6;
+}
+
+@keyframes floatToggle {
+	0% {
+		tranform: translate(0, 0);
+	}
+	25% {
+		tranform: translate(4px, -6px);
+	}
+	50% {
+		tranform: translate(-4px, -3px);
+	}
+	75% {
+		tranform: translate(3px, 4px);
+	}
+	100% {
+		tranform: translate(0, 0);
+	}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+	<div class="home page">
+		<a href="homepage.html">HOME</a>
+			<a href="biodata.html">BIODATA</a>
+			<a href="education.html">EDUCATION</a>
+			<a href="experience.html">EXPERIENCE</a>
+			<a href="gallery1.html">GALLERY</a>
+			<a href="social media.html">SOCIAL MEDIA</a>
+	</div>
+    </div>
+
+<div class="section-title">
+	<h1>MY EXPERIENCE</h1>
+</div>
+
+<div class="grid">
+
+	<div class="card">
+		<div class="image-box">
+
+			<img src="tnb.jpg" alt="Experience 1">
+		</div>
+
+		<h3>Intership Experience</h3>
+
+		<p>
+			I completed an eight-week internship at TNB Janamanjung Sdn. Bhd., where I gained experience in document management and administrative tasks while enhancing my professional skills.
+		</p>
+	</div>
+
+	<div class="card">
+		<div class="image-box">
+
+			<img src="zus.jpg" alt="Experience 2">
+		</div>
+
+		<h3>Part-time Experience</h3>
+
+		<p>
+			I worked part-time at ZUS Coffee for one month, where I gained experience in customer service, beverage preparation, and teamwork in a fast-paced environment.
+		</p>
+	</div>
+
+	<div class="card">
+		<div class="image-box">
+
+			<img src="tealive.jpg" alt="Experience 3">
+		</div>
+
+		<h3>Part-time Experience</h3>
+
+		<p>
+			I worked part-time at Tealive, where I gained experience in customer service, beverage preparation, and teamwork while working in a fast-paced environment.
+		</p>
+	</div>
+
+</body>
+</html>
+
+
+
+
+

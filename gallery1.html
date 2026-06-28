@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MY PICTURE</title>
+
+<style>
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Georgia", serif;
+}
+
+body {
+	min-height: 100vh;
+	background: radial-gradient(circle at bottom right,  #B76E79, #000000); color; white;
+	padding: 60px;
+}
+
+.navbar {
+	       position: absolute;
+	       top: 40px;
+	       right: 60px;
+	       display: flex;
+	       justify-content: space-between;
+	       align-items: center;
+	       font-size: 14px;
+	       letter-spacing: 2px;
+       }
+
+       .navbar a {
+          color: white;
+       	text-decoration: none;
+       	margin-left: 25px;
+       }
+
+.gallery-header h1 {
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+
+.gallery-header p {
+	opacity: 0.7;
+	margin-bottom: 50px;
+}
+
+.gallery-section {
+	margin-bottom: 70px;
+}
+
+.gallery-section h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+.slider-wrapper {
+	position: relative;
+}
+
+.slider {
+	display: flex;
+	gap: 25px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.slider img {
+	width: 700px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 20px;
+	flex-shrink: 0;
+}
+
+.arrow {
+	position: absolute;
+	top: 50px;
+	transform: translateY(-50%);
+	background: rgba(255,255,255,0.15);
+	border: none;
+	color: white;
+	font-size: 28px;
+	padding: 10px 16px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.arrow:hover {
+	background: rgba(255,255,255,0.3);
+}
+
+.arrow.left {
+	left: -25px;
+}
+
+.arrow.right {
+	right: -25px;
+}
+
+@media (max-width: 768px) {
+	.slider img {
+		width: 200px;
+		height: 280px;
+	}
+
+	.arrow.left {
+		left: 0;
+	}
+
+	.arrow.right {
+		right: 0;
+	}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+		<div class="home page">
+		<a href="homepage.html">HOME</a>
+			<a href="biodata.html">BIODATA</a>
+			<a href="education.html">EDUCATION</a>
+			<a href="experience.html">EXPERIENCE</a>
+			<a href="gallery1.html">GALLERY</a>
+			<a href="social media.html">SOCIAL MEDIA</a>
+	</div>
+    </div>
+
+<div class="gallery-header">
+	<h2>PICTURE WITH MY FRIENDS</h2>
+
+<div class="slider-wrapper">
+
+    <button class="arrow left"
+    onclick="slide('friends',-1)">❮</button>
+
+    <div class="slider" id="friends">
+
+        <img src="ghombau1.jpg">
+        <img src="ghombau2.jpg">
+        <img src="ghombau2.jpg">
+        <img src="ghombau.jpg">
+
+    </div>
+
+    <button class="arrow right"
+    onclick="slide('friends',1)">❯</button>
+
+</div>
+<h2>PICTURE WITH AISYA</h2>
+
+<div class="slider-wrapper">
+
+    <button class="arrow left"
+    onclick="slide('aisya',-1)">❮</button>
+
+    <div class="slider" id="aisya">
+    	
+        <img src="aisya1.jpg">
+        <img src="aisya2.jpg">
+        <img src="aisya3.jpg">
+        <img src="aisya.jpg">
+
+    </div>
+
+    <button class="arrow right"
+    onclick="slide('aisya',1)">❯</button>
+
+</div>
+
+<h2>PICTURE WITH ADDYNA</h2>
+
+<div class="slider-wrapper">
+
+    <button class="arrow left"
+    onclick="slide('addyna',-1)">❮</button>
+
+    <div class="slider" id="aisya">
+    	
+        <img src="addyna1.jpg">
+        <img src="addyna2.jpg">
+        <img src="addyna.jpg">
+
+    </div>
+
+    <button class="arrow right"
+    onclick="slide('addyna',1)">❯</button>
+
+</div>
+<h2>PICTURE WITH JIA</h2>
+
+<div class="slider-wrapper">
+
+    <button class="arrow left"
+    onclick="slide('jia',-1)">❮</button>
+
+    <div class="slider" id="jia">
+
+        <img src="jia1.jpg">
+        <img src="jia2.jpg">
+        <img src="jia3.jpg">
+        <img src="jia.jpg">
+
+    </div>
+
+    <button class="arrow right"
+    onclick="slide('jia',1)">❯</button>
+
+</div>
+
+  <script>
+function slide(id, direction) {
+    const slider = document.getElementById(id);
+    const width = slider.clientWidth;
+
+    slider.scrollLeft += direction * width;
+}
+</script>
+
+</body>
+</html>
